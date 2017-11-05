@@ -16,12 +16,27 @@ const userData = {
  */
 
  let store = {
+     reps: [],
+     username: ""
 
  };
+const CHANGE_USERNAME = 'CHANGE_USERNAME'
+
 
  let action = {
      type: "",
      data: {
-         
+         value: "o"
+
      }
- }
+ };
+
+ const reducer = function (store, action) {
+     if (action.type === CHANGE_USERNAME) {
+         newStore = object.assign({}, store, {username: action.data.value});
+     }
+     return store;
+
+ console.log(reducer(store, {
+     
+ }))
