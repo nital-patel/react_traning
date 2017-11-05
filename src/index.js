@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -13,3 +13,15 @@ const userData = {
  ReactDOM.render(<App user={userData} />, document.getElementById('root'));
  
  registerServiceWorker(); // This function helps live reload of the module on the browser
+ */
+
+ let store = {
+
+ };
+
+ let action = {
+     type: "",
+     data: {
+         
+     }
+ }
