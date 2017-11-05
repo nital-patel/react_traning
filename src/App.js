@@ -1,16 +1,6 @@
 import React, { Component } from 'react';
+import Hobbies from './components/Hobbies';
 
-function Hobbies({hobbies}) {
-    return (
-        <ul>
-            {
-                hobbies.map((hobbie, index)=> {
-                    return (<li key={index}>{hobbie}</li>);
-                })
-            }
-        </ul>
-    );
-};
 
 function Greeting({name}) {
     return "Hello " + (name ? name : 'Stranger');
