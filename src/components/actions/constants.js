@@ -1,0 +1,7 @@
+const CHANGE_USERNAME =  'CHANGE_USERNAME';
+const FETCHED_REPOS =  'FETCHED_REPOS';
+
+export default {
+    CHANGE_USERNAME, 
+    FETCHED_REPOS
+}

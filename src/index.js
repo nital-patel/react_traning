@@ -1,42 +1,46 @@
-/*import React from 'react';
+/*
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-const userData = {
-    name: "joe",
-    hobbies: [
-        "reading", "playing", "listening"
-    ]
- }
- ReactDOM.render(<App user={userData} />, document.getElementById('root'));
- 
- registerServiceWorker(); // This function helps live reload of the module on the browser
- */
+ReactDOM.render(<App />, document.getElementById('root'));
+registerServiceWorker();
+*/
 
- let store = {
-     reps: [],
-     username: ""
+import store from './store';
+import actions from './actions/constants';
 
- };
-const CHANGE_USERNAME = 'CHANGE_USERNAME'
+function changeUser(value) {
+    return {
+        type: actions.CHANGE_USERNAME,
+        data: {
+            value
+        }
+    } 
+}
+store.subscribe(() => {
+    console.log(store.getState())
+});
+
+store.dispatch(changeUser("o"));
+store.dispatch(changeUser("oc"));
+store.dispatch(changeUser("oct"));
 
 
- let action = {
-     type: "",
-     data: {
-         value: "o"
+store.dispatch({
+    type: actions.FETCHED_REPOS,
+    data: {
+        value: [
+            {
+                "id": 18221276,
+                "name": "git-consortium",
+                "full_name": "octocat/git-consortium"                
+              }
+        ]
+    }
+});
 
-     }
- };
 
- const reducer = function (store, action) {
-     if (action.type === CHANGE_USERNAME) {
-         newStore = object.assign({}, store, {username: action.data.value});
-     }
-     return store;
 
- console.log(reducer(store, {
-     
- }))
