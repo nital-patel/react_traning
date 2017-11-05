@@ -5,7 +5,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 const userData = {
-    name: "JOE",
+    name: "joe",
     hobbies: [
         "reading", "playing", "listening"
     ]

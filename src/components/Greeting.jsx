@@ -2,7 +2,7 @@ import React from 'react';
 
 export function Greeting({name}) {
     return (
-    <p>{ "hello" + (name ? name : 'Stranger')}</p>
+    <p>{ "hello " + (name ? name : 'Stranger')}</p>
 );
 }
 
