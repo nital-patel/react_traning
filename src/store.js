@@ -3,7 +3,7 @@ import reducers from './reducers';
 
 let initialState = {
     repos: [],
-    username: ""
+    username: "abc"
 };
 
 export default createStore(reducers, initialState);

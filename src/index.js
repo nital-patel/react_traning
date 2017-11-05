@@ -1,18 +1,27 @@
-/*
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
-*/
-
+import { Provider } from 'react-redux';
 import store from './store';
 import actions from './actions/constants';
+import App from './components/App';
+import registerServiceWorker from './registerServiceWorker';
 
-function changeUser(value) {
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('root')
+);
+    
+registerServiceWorker();
+
+store.subscribe(() => {
+    console.log(store.getState())
+});
+
+/*function changeUser(value) {
     return {
         type: actions.CHANGE_USERNAME,
         data: {
@@ -20,9 +29,6 @@ function changeUser(value) {
         }
     } 
 }
-store.subscribe(() => {
-    console.log(store.getState())
-});
 
 store.dispatch(changeUser("o"));
 store.dispatch(changeUser("oc"));
@@ -41,6 +47,7 @@ store.dispatch({
         ]
     }
 });
+*/
 
 
 
