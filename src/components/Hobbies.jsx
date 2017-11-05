@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Hobbies({hobbies}) {
+export function Hobbies({hobbies}) {
     return (
         <ul>
             {
@@ -11,3 +11,5 @@ export default function Hobbies({hobbies}) {
         </ul>
     );
 };
+
+export default Hobbies;

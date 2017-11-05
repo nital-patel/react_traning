@@ -1,35 +1,7 @@
 import React, { Component } from 'react';
 import Hobbies from './components/Hobbies';
-
-
-function Greeting({name}) {
-    return "Hello " + (name ? name : 'Stranger');
-}
-// Greeting.propTypes = {
-//     name: PropTypes.string.isRequired
-// };
-
-class Time extends Component {
-  constructor(props) {
-      super(props);
-      this.state = {
-          currentTime: new Date().toString()
-      };
-  }
-
-  componentWillMount() {
-      setInterval(()=> {
-          this.setState({
-              currentTime: new Date().toString()
-          });
-      }, 1000);
-  }
-  render() {
-    return (
-        <div>The current time is {this.state.currentTime}</div>
-    )
-}
-}
+import Greeting from './components/Greeting';
+import Time from './components/Time';
 
 class Application extends Component {
 constructor(props) {
